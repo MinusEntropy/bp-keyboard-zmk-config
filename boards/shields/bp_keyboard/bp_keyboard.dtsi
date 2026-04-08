@@ -1,0 +1,25 @@
+/*
+ * Copyright (c) 2026 BP Keyboard
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+/*
+ * BP分体键盘共享定义
+ * 矩阵: 6行 x 9列
+ *
+ * 左键盘列映射: COL0-COL7+1
+ * 右键盘列映射: COL8-1 至 COL15
+ */
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+};
+
+/* 左键盘矩阵定义 - 在 bp_keyboard_left.overlay 中完成 */
+/* 右键盘矩阵定义 - 在 bp_keyboard_right.overlay 中完成 */
