@@ -8,6 +8,9 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config ZMK_USB
+    default y
+
 endif
 
 if SHIELD_BP_KEYBOARD_RIGHT
@@ -24,10 +27,6 @@ endif
 if SHIELD_BP_KEYBOARD_LEFT || SHIELD_BP_KEYBOARD_RIGHT
 
 config ZMK_BLE
-    default y
-
-# 启用USB
-config ZMK_USB
     default y
 
 endif
