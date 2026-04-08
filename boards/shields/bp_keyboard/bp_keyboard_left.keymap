@@ -13,7 +13,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "BASE";
+            display-name = "BASE";
             bindings = <
                 &kp ESC   &kp GRAVE &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7
                 &kp BSPC  &kp TAB   &kp Q     &none     &kp W     &kp E     &kp R     &kp T     &kp Y
@@ -25,7 +25,7 @@
         };
 
         sym_layer {
-            label = "SYMBOLS";
+            display-name = "SYMBOLS";
             bindings = <
                 &trans    &trans    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    &kp F7
                 &trans    &trans    &kp LPAR  &kp RPAR  &kp SQT   &kp DQT   &kp MINUS &trans    &trans
@@ -37,7 +37,7 @@
         };
 
         nav_layer {
-            label = "NAV_MEDIA";
+            display-name = "NAV_MEDIA";
             bindings = <
                 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
                 &trans    &trans    &kp HOME  &kp UP    &kp END   &trans    &trans    &trans    &trans
@@ -49,7 +49,7 @@
         };
 
         sys_layer {
-            label = "SYSMGR";
+            display-name = "SYSMGR";
             bindings = <
                 &trans         &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
                 &studio_unlock &trans    &bt BT_PRV &bt BT_NXT &trans   &trans    &trans    &bt BT_CLR &trans
@@ -61,7 +61,7 @@
         };
 
         game_layer {
-            label = "GAME";
+            display-name = "GAME";
             bindings = <
                 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
                 &tog 0    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
