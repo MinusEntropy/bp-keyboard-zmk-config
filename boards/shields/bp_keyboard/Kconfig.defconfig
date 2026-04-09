@@ -17,14 +17,18 @@ if SHIELD_BP_KEYBOARD_RIGHT
 config ZMK_KEYBOARD_NAME
     default "BP Keyboard Right"
 
-# 确保不是 central 角色
-config ZMK_SPLIT_ROLE_CENTRAL
-    default n
-
-# 外设侧不需要 USB，会自动禁用，无需显式配置
+# 右键盘默认就是 Peripheral 角色，无需设置 ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
+# 分体键盘功能默认启用
+if SHIELD_BP_KEYBOARD_LEFT || SHIELD_BP_KEYBOARD_RIGHT
+
+config ZMK_SPLIT
+    default y
+
 # 蓝牙默认启用
 config ZMK_BLE
-    default y if SHIELD_BP_KEYBOARD_LEFT || SHIELD_BP_KEYBOARD_RIGHT
+    default y
+
+endif
