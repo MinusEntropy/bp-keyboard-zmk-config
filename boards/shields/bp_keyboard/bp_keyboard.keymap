@@ -186,22 +186,22 @@
     &trans &trans &trans &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans &trans &trans &trans
 
 // 行1: 数字行 (左9键 + 右9键)
+     &trans &trans &trans &trans &trans &trans &trans &trans &trans          &trans &trans &trans &trans &trans &trans &trans &trans &trans
+
+// 行2: Tab行 
 //  左: +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+          //  右: (全透传)
 //      |  M  | | --- | | --- | | --- | | --- | | --- | | --- | | --- | | --- |
 //      +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+
-    &kp M  &trans &trans &trans &trans &trans &trans &trans &trans          &trans &trans &trans &trans &trans &trans &trans &trans &trans
-
-// 行2: Tab行 (全透传)
     &trans &trans &trans &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 
 // 行3: Caps行 (全透传)
-    &trans &trans &trans &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &kp M &trans &trans &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans &trans &trans &trans &trans
 
 // 行4: Shift行 (左9键 + 右9键)
 //  左: +-----+ +-------+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+          //  右: (全透传)
-//      | TG5 | | Shift | | --- | | --- | | --- | | --- | | --- | | --- | | --- |
+//      | TG5 | | ----  |  |Shift| | --- | | --- | | --- | | --- | | --- | | --- |
 //      +-----+ +-------+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+
-    &tog 0 &kp LSHFT &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &tog 4 &trans &kp LSHFT &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans &trans &trans
 
 // 行5: 拇指区 (左8键 + 右7键)
     &mo 2  &trans &trans &trans &trans &trans &mo 1 &mo 2                    &mo 1 &trans &trans &trans &trans &trans &trans &trans
