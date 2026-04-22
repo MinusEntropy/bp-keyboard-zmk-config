@@ -25,6 +25,6 @@
 };
 
 // 左键盘列偏移为0（可省略）
-&default_transform {
+&matrix_transform0 {
     col-offset = <0>;
 };

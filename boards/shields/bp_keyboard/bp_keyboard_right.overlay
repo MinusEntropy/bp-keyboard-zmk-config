@@ -25,6 +25,6 @@
 };
 
 // 关键：右键盘列偏移9，使其映射到统一矩阵的9-17列
-&default_transform {
+&matrix_transform0 {
     col-offset = <9>;
 };
