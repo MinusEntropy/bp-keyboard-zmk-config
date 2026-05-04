@@ -22,14 +22,18 @@
             , <&pro_micro 1 GPIO_ACTIVE_HIGH>
             ;
     };
+
+    // 覆盖EXT_POWER配置，使用GPIO_ACTIVE_LOW
+    // 这样驱动初始化后调用enable时，GPIO0.13输出低电平，VCC关闭
+    // 电路原理：GPIO低电平 → ME6217 EN低 → VCC关闭
+    EXT_POWER {
+        compatible = "zmk,ext-power-generic";
+        control-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
+        init-delay-ms = <50>;
+    };
 };
 
 // 关键：右键盘列偏移9，使其映射到统一矩阵的9-17列
 &matrix_transform0 {
     col-offset = <9>;
-};
-
-// 完全删除EXT_POWER节点（PCB未使用VCC输出）
-/ {
-    /delete-node/ EXT_POWER;
 };
