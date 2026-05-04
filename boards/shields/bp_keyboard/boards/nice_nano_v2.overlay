@@ -3,11 +3,26 @@
  * SPDX-License-Identifier: MIT
  *
  * 禁用nice_nano_v2的外部电源控制（PCB未使用VCC输出）
+ *
+ * nice_nano_v2 使用 GPIO0.13 (GPIO_ACTIVE_HIGH) 控制 ME6217 LDO
+ * 通过 gpio-hog 强制将 GPIO0.13 设为低电平，关闭VCC输出
  */
 
 / {
-    // 覆盖板级定义的EXT_POWER节点，禁用VCC输出
+    // 禁用外部电源控制节点
     EXT_POWER {
         status = "disabled";
+    };
+};
+
+/*
+ * 使用 gpio-hog 将 GPIO0.13 配置为输出低电平
+ * 这会在GPIO控制器初始化时执行，早于驱动初始化
+ */
+&gpio0 {
+    ext_power_off: ext_power_off {
+        gpio-hog;
+        gpios = <13 GPIO_ACTIVE_HIGH>;
+        output-low;
     };
 };
