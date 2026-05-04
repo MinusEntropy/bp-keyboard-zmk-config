@@ -22,15 +22,6 @@
             , <&pro_micro 2 GPIO_ACTIVE_HIGH>
             ;
     };
-
-    // 覆盖EXT_POWER配置，使用GPIO_ACTIVE_LOW
-    // 这样驱动初始化后调用enable时，GPIO0.13输出低电平，VCC关闭
-    // 电路原理：GPIO低电平 → ME6217 EN低 → VCC关闭
-    EXT_POWER {
-        compatible = "zmk,ext-power-generic";
-        control-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
-        init-delay-ms = <50>;
-    };
 };
 
 // 左键盘列偏移为0（可省略）
