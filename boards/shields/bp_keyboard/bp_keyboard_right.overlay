@@ -28,8 +28,3 @@
 &matrix_transform0 {
     col-offset = <9>;
 };
-
-// 禁用外部电源控制（PCB未使用VCC输出）
-&EXT_POWER {
-    status = "disabled";
-};
