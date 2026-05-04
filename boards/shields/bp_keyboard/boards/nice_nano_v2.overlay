@@ -6,8 +6,8 @@
  */
 
 / {
-    // 覆盖板级定义的EXT_POWER节点
-    ext_power: EXT_POWER {
+    // 覆盖板级定义的EXT_POWER节点，禁用VCC输出
+    EXT_POWER {
         status = "disabled";
     };
 };

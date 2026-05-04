@@ -2,12 +2,12 @@
  * Copyright (c) 2026 BP Keyboard
  * SPDX-License-Identifier: MIT
  *
- * 禁用nice_nano_v2的外部电源控制（PCB未使用VCC输出）
+ * 禁用nice_nano的外部电源控制（PCB未使用VCC输出）
  */
 
 / {
-    // 覆盖板级定义的EXT_POWER节点
-    ext_power: EXT_POWER {
+    // 覆盖板级定义的EXT_POWER节点，禁用VCC输出
+    EXT_POWER {
         status = "disabled";
     };
 };
