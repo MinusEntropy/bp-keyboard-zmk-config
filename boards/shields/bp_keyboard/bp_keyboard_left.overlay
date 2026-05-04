@@ -22,6 +22,9 @@
             , <&pro_micro 2 GPIO_ACTIVE_HIGH>
             ;
     };
+
+    // 完全删除EXT_POWER节点（PCB未使用VCC输出）
+    /delete-node/ EXT_POWER;
 };
 
 // 左键盘列偏移为0（可省略）
